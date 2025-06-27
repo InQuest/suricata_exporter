@@ -340,6 +340,13 @@ var (
 		nil,
 	)
 
+	SuricataUp = prometheus.NewDesc(
+		"suricata_up",
+		"Indicates if the Suricata service is reachable by the exporter (1 = reachable, 0 = unreachable)",
+		nil,
+		nil,
+	)
+
 	// Errors used for above metric
 	errConnect      = errors.New("failed to connect")
 	errDumpCounters = errors.New("failed to dump-counters")
@@ -866,9 +873,9 @@ func (sc *suricataCollector) Collect(ch chan<- prometheus.Metric) {
 	defer sc.mu.Unlock()
 
 	if err := sc.client.EnsureConnection(); err != nil {
-		log.Printf("ERROR: Failed to connect to %v", err)
+		// No log.Printf - silent failure
 		ch <- prometheus.NewInvalidMetric(FailedCollectionDesc, errConnect)
-
+		ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 0)
 		return
 	}
 
@@ -876,9 +883,12 @@ func (sc *suricataCollector) Collect(ch chan<- prometheus.Metric) {
 	if err != nil {
 		log.Printf("ERROR: Failed to dump-counters: %v", err)
 		ch <- prometheus.NewInvalidMetric(FailedCollectionDesc, errDumpCounters)
-
+		log.Print("Setting suricata as down")
+		ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 0)
 		return
 	}
+
+	ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 1)
 
 	produceMetrics(ch, counters)
 }
