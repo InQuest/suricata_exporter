@@ -879,16 +879,14 @@ func (sc *suricataCollector) Collect(ch chan<- prometheus.Metric) {
 		return
 	}
 
+	ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 1)
+
 	counters, err := sc.client.DumpCounters()
 	if err != nil {
 		log.Printf("ERROR: Failed to dump-counters: %v", err)
 		ch <- prometheus.NewInvalidMetric(FailedCollectionDesc, errDumpCounters)
-		log.Print("Setting suricata as down")
-		ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 0)
 		return
 	}
-
-	ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 1)
 
 	produceMetrics(ch, counters)
 }
