@@ -873,7 +873,14 @@ func (sc *suricataCollector) Collect(ch chan<- prometheus.Metric) {
 	defer sc.mu.Unlock()
 
 	if err := sc.client.EnsureConnection(); err != nil {
-		// No log.Printf - silent failure
+		if *quiet {
+			// This was added to differentiate between suricata not being enabled
+			// and actual errors.
+			log.Printf("INFO: Suricata may not be enabled: %v", err)
+		} else {
+			log.Printf("ERROR: Failed to connect to %v", err)
+		}
+
 		ch <- prometheus.NewInvalidMetric(FailedCollectionDesc, errConnect)
 		ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 0)
 		return
@@ -897,6 +904,7 @@ var (
 	socketPath  = flag.String("suricata.socket-path", "/var/run/suricata.socket", "Path to the Suricata Command socket.")
 	addr        = flag.String("web.listen-address", ":9917", "Address to listen on")
 	path        = flag.String("web.telemetry-path", "/metrics", "Path for metrics")
+	quiet       = flag.Bool("quiet", false, "Suppress log output")
 )
 
 func main() {
@@ -912,6 +920,11 @@ func main() {
 		fmt.Printf("%s\n", version)
 		return
 	}
+
+	if *quiet {
+		log.Printf("Info: Logging is set to quiet mode")
+	}
+
 	r := prometheus.NewRegistry()
 	r.MustRegister(&suricataCollector{NewSuricataClient(*socketPath), sync.Mutex{}})
 

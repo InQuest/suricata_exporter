@@ -15,6 +15,8 @@ Usage of ./suricata_exporter:
         Output version information.
   -web.listen-address string
         Address to listen on (default ":9917")
+  -quiet 
+        supress logging messages when suricata is not enabled
 ```
 
 To verify the exporter is working with your Suricata setup, use the
