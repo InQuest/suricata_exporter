@@ -340,6 +340,13 @@ var (
 		nil,
 	)
 
+	SuricataUp = prometheus.NewDesc(
+		"suricata_up",
+		"Indicates if the Suricata service is reachable by the exporter (1 = reachable, 0 = unreachable)",
+		nil,
+		nil,
+	)
+
 	// Errors used for above metric
 	errConnect      = errors.New("failed to connect")
 	errDumpCounters = errors.New("failed to dump-counters")
@@ -866,17 +873,20 @@ func (sc *suricataCollector) Collect(ch chan<- prometheus.Metric) {
 	defer sc.mu.Unlock()
 
 	if err := sc.client.EnsureConnection(); err != nil {
-		log.Printf("ERROR: Failed to connect to %v", err)
-		ch <- prometheus.NewInvalidMetric(FailedCollectionDesc, errConnect)
+		if !*quiet {
+			log.Printf("ERROR: Failed to connect to %v", err)
+		}
 
+		ch <- prometheus.NewInvalidMetric(FailedCollectionDesc, errConnect)
 		return
 	}
+
+	ch <- prometheus.MustNewConstMetric(SuricataUp, prometheus.GaugeValue, 1)
 
 	counters, err := sc.client.DumpCounters()
 	if err != nil {
 		log.Printf("ERROR: Failed to dump-counters: %v", err)
 		ch <- prometheus.NewInvalidMetric(FailedCollectionDesc, errDumpCounters)
-
 		return
 	}
 
@@ -889,6 +899,7 @@ var (
 	socketPath  = flag.String("suricata.socket-path", "/var/run/suricata.socket", "Path to the Suricata Command socket.")
 	addr        = flag.String("web.listen-address", ":9917", "Address to listen on")
 	path        = flag.String("web.telemetry-path", "/metrics", "Path for metrics")
+	quiet       = flag.Bool("quiet", false, "Suppress log output")
 )
 
 func main() {
@@ -904,6 +915,7 @@ func main() {
 		fmt.Printf("%s\n", version)
 		return
 	}
+
 	r := prometheus.NewRegistry()
 	r.MustRegister(&suricataCollector{NewSuricataClient(*socketPath), sync.Mutex{}})
 
