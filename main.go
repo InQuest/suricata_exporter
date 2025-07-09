@@ -868,8 +868,10 @@ func handleFlowRecyclerThread(ch chan<- prometheus.Metric, threadName string, th
 		}
 	}
 
-	// Handle flow end metrics
-	handleFlowEndCommon(ch, threadName, flow)
+	if threadName != "Total" {
+		// Handle flow end metrics
+		handleFlowEndCommon(ch, threadName, flow)
+	}
 }
 
 // Handle global metrics.
@@ -948,6 +950,14 @@ func handleGlobal(ch chan<- prometheus.Metric, message map[string]any) {
 		log.Printf("WARN: No top-level detect entry")
 	}
 
+	if *totals {
+		// Export the overall global metrics calculated as the sum of all threads.
+		// The entries defined at the top-level have the same structure of the thread ones
+		handleWorkerThread(ch, "Total", message)
+		handleFlowManagerThread(ch, "Total", message)
+		handleFlowRecyclerThread(ch, "Total", message)
+	}
+
 }
 
 func produceMetrics(ch chan<- prometheus.Metric, counters map[string]any) {
@@ -957,33 +967,35 @@ func produceMetrics(ch chan<- prometheus.Metric, counters map[string]any) {
 	// Uptime metric
 	ch <- newConstMetric(metricUptime, message)
 
-	// Produce per thread metrics
-	for threadName, thread_ := range message["threads"].(map[string]any) {
-		if thread, ok := thread_.(map[string]any); ok {
-			if strings.HasPrefix(threadName, "W#") || strings.HasPrefix(threadName, "W-") {
-				handleWorkerThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "RX") {
-				handleReceiveThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "TX") {
-				handleTransmitThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "FM") {
-				handleFlowManagerThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "FR") {
-				handleFlowRecyclerThread(ch, threadName, thread)
-			} else if threadName == "Global" {
-				// Skip
-			} else if threadName == "NapatechStats" {
-				// Skip
+	// Produce per thread metrics if not in totals mode.
+	if !*totals {
+		for threadName, thread_ := range message["threads"].(map[string]any) {
+			if thread, ok := thread_.(map[string]any); ok {
+				if strings.HasPrefix(threadName, "W#") || strings.HasPrefix(threadName, "W-") {
+					handleWorkerThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "RX") {
+					handleReceiveThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "TX") {
+					handleTransmitThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "FM") {
+					handleFlowManagerThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "FR") {
+					handleFlowRecyclerThread(ch, threadName, thread)
+				} else if threadName == "Global" {
+					// Skip
+				} else if threadName == "NapatechStats" {
+					// Skip
+				} else {
+					log.Printf("WARN: Unhandled thread: %s", threadName)
+				}
 			} else {
-				log.Printf("WARN: Unhandled thread: %s", threadName)
-			}
-		} else {
-			// The following two show up under threads in 7.0.x,
-			// ignore them.
-			//
-			// https://redmine.openinfosecfoundation.org/issues/6398
-			if threadName != "memcap_pressure" && threadName != "memcap_pressure_max" {
-				log.Printf("WARN: Threads entry %s not a map[string]", threadName)
+				// The following two show up under threads in 7.0.x,
+				// ignore them.
+				//
+				// https://redmine.openinfosecfoundation.org/issues/6398
+				if threadName != "memcap_pressure" && threadName != "memcap_pressure_max" {
+					log.Printf("WARN: Threads entry %s not a map[string]", threadName)
+				}
 			}
 		}
 	}
@@ -1035,6 +1047,7 @@ var (
 	addr        = flag.String("web.listen-address", ":9917", "Address to listen on")
 	path        = flag.String("web.telemetry-path", "/metrics", "Path for metrics")
 	quiet       = flag.Bool("quiet", false, "Suppress log output")
+	totals      = flag.Bool("totals", false, "Export the overall global total metrics.")
 )
 
 func main() {
