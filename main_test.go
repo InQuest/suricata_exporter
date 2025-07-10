@@ -248,8 +248,8 @@ func TestDump604Netmap(t *testing.T) {
 	metrics := produceMetricsHelper(counters)
 	// This is a bit dumb because once more metrics are added this isn't
 	// useful, but testing individual metrics is a bit annoying.
-	if len(metrics) != 233 {
-		t.Errorf("Expected 233 metrics, got %d", len(metrics))
+	if len(metrics) != 243 {
+		t.Errorf("Expected 243 metrics, got %d", len(metrics))
 	}
 }
 
