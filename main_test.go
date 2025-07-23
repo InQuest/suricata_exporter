@@ -460,3 +460,142 @@ func TestDump706AFPacketAutoFP(t *testing.T) {
 		t.Errorf("Unexpected number of suricata_decoder_packets_total metrics: %v", len(tms))
 	}
 }
+
+func TestDump800AFPacket(t *testing.T) {
+	data, err := os.ReadFile("./testdata/dump-counters-8.0.0-afpacket.json")
+	if err != nil {
+		log.Panicf("Unable to open file: %s", err)
+	}
+
+	var counters map[string]any
+	err = json.Unmarshal(data, &counters)
+	if err != nil {
+		t.Error(err)
+	}
+
+	metrics := produceMetricsHelper(counters)
+	agged := aggregateMetrics(metrics)
+
+	tms, ok := agged["suricata_capture_afpacket_poll_results_total"] // test metrics
+	if !ok {
+		t.Errorf("Failed to find suricata_capture_afpacket_poll_results_total metrics")
+	}
+	// 8 threads, 4 results
+	if len(tms) != 32 {
+		t.Errorf("Unexpected number of suricata_capture_afpacket_poll_results_total metrics: %v", len(tms))
+	}
+
+	tms, ok = agged["suricata_detect_alerts_total"] // test metrics
+	if !ok {
+		t.Errorf("Failed to find detect_alerts_total metrics")
+	}
+	if len(tms) != 8 {
+		t.Errorf("Unexpected number of suricata_detect_alerts_total metrics: %v", len(tms))
+	}
+
+	tms, ok = agged["suricata_detect_alert_queue_overflows_total"] // test metrics
+	if !ok {
+		t.Errorf("Failed to find detect_alerts_queue_overflows_total metrics")
+	}
+	if len(tms) != 8 {
+		t.Errorf("Unexpected number of suricata_detect_alerts_queue_overflows_total metrics: %v", len(tms))
+	}
+
+	// Removed metrics in 8.0.0
+	tms, ok = agged["suricata_defrag_max_frag_hits"]
+	if ok {
+		t.Errorf("Failed, found suricata_defrag_max_frag_hits metrics when it should not be present")
+	}
+	tms, ok = agged["suricata_tcp_pseudo_failed_total"]
+	if ok {
+		t.Errorf("Failed, found suricata_tcp_pseudo_failed_total metrics when it should not be present")
+	}
+
+	// New metrics in 8.0.0
+	tms, ok = agged["suricata_defrag_max_trackers_reached"]
+	if !ok {
+		t.Errorf("Failed to find suricata_defrag_max_trackers_reached metrics")
+	}
+	if len(tms) != 8 {
+		t.Errorf("Unexpected number of suricata_defrag_max_trackers_reached: %v", len(tms))
+	}
+
+	tms, ok = agged["suricata_tcp_urgent_oob_data_total"]
+	if !ok {
+		t.Errorf("Failed to find suricata_tcp_urgent_oob_data_total metrics")
+	}
+	if len(tms) != 8 {
+		t.Errorf("Unexpected number of suricata_tcp_urgent_oob_data_total: %v", len(tms))
+	}
+
+	tms, ok = agged["suricata_decoder_event_afpacket_truncated_packets_total"]
+	if !ok {
+		t.Errorf("Failed to find suricata_decoder_event_afpacket_truncated_packets_total metrics")
+	}
+	if len(tms) != 8 {
+		t.Errorf("Unexpected number of suricata_decoder_event_afpacket_truncated_packets_total: %v", len(tms))
+	}
+
+	// Global
+	tms, ok = agged["suricata_defrag_memuse_bytes"]
+	if !ok {
+		t.Errorf("Failed to find suricata_defrag_memuse_bytes metrics")
+	}
+	if len(tms) != 1 {
+		t.Errorf("Unexpected number of suricata_defrag_memuse_bytes: %v", len(tms))
+	}
+
+	// Smoke test the flow.end metrics
+	// # flow.end.tcp_state
+	// For per-thread TCP -> tcp.sessions = tcp.active_sessions + flow.end.tcp_state.closed
+	// Test not feasible because `suricata_tcp_sessions_active` is not active
+
+	// # flow.end.state
+	// For per-thread Flow -> flow.total = flow.active + flow.end.closed
+	// suricata_flow_all_total = suricata_flow_active_flows + suricata_flow_end_state_closed_total
+	tms_fall, ok_fall := agged["suricata_flow_all_total"]
+	if !ok_fall {
+		t.Errorf("Failed to find suricata_flow_all_total metrics")
+	}
+	tms_fact, ok_fact := agged["suricata_flow_active_flows"]
+	if !ok_fact {
+		t.Errorf("Failed to find suricata_flow_active_flows metrics")
+	}
+	tms_fcls, ok_fcls := agged["suricata_flow_end_state_closed_total"]
+	if !ok_fcls {
+		t.Errorf("Failed to find suricata_flow_end_state_closed_total metrics")
+	}
+
+	// Perform the calculation per each thread
+	for i := 0; i < len(tms_fall); i++ {
+		tm_fall := tms_fall[i]
+		tm_fact := tms_fact[i]
+		tm_fcls := tms_fcls[i]
+
+		if tm_fall.value != (tm_fact.value + tm_fcls.value) {
+			t.Errorf("suricata_flow_all_total (%v) != suricata_flow_active_flows (%v) + suricata_flow_end_state_closed_total (%v)", tm_fall.value, tm_fact.value, tm_fcls.value)
+		}
+	}
+}
+
+func TestDump800AFPacketFileStore(t *testing.T) {
+	data, err := os.ReadFile("./testdata/dump-counters-8.0.0-afpacket-filestore.json")
+	if err != nil {
+		log.Panicf("Unable to open file: %s", err)
+	}
+
+	var counters map[string]any
+	err = json.Unmarshal(data, &counters)
+	if err != nil {
+		t.Error(err)
+	}
+
+	metrics := produceMetricsHelper(counters)
+	agged := aggregateMetrics(metrics)
+
+	tms := agged["suricata_filestore_open_files_max_hit"]
+
+	if len(tms) != 8 {
+		t.Errorf("Unexpected number of suricata_filestore_open_files_max_hit: %v", len(tms))
+	}
+}
