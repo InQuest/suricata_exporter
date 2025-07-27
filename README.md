@@ -17,6 +17,8 @@ Usage of ./suricata_exporter:
         Address to listen on (default ":9917")
   -quiet
         supress logging messages when suricata is not enabled
+  -totals
+        Export only the overall global total metrics instead of per-thread metrics. (default false)
 ```
 
 To verify the exporter is working with your Suricata setup, use the

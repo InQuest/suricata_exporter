@@ -102,7 +102,7 @@ var (
 		{"poll_errors", "error"},
 	}
 
-	// Not quite sure it would be better to have those as labels or separate
+	// Not quite sure if it would be better to have those as labels or separate
 	// metrics. But summing them up seems weird (think tcp on top of ipv4 inside gre),
 	// so keeping them as separate metrics for now.
 	//
@@ -150,17 +150,35 @@ var (
 		// They are there, so include them.
 		newPerThreadGaugeMetric("decoder", "packet_size_avg", "", "avg_pkt_size"),
 		newPerThreadGaugeMetric("decoder", "packet_size_max", "", "max_pkt_size"),
+		newPerThreadGaugeMetric("decoder", "mac_address_src_max", "", "max_mac_addrs_src"),
+		newPerThreadGaugeMetric("decoder", "mac_address_dst_max", "", "max_mac_addrs_dst"),
 
 		newPerThreadCounterMetric("decoder", "too_many_layers_total", "", "too_many_layers"),
 	}
 
+	// From: .thread.decoder.event.afpacket
+	// New in 8.0.0: d78f2c9a4e2b59f44daeddff098915084493d08d
+	perThreadDecoderEventAFPacketMetrics = []metricInfo{
+		newPerThreadCounterMetric("decoder_event", "afpacket_truncated_packets_total", "", "trunc_pkt"),
+	}
+
 	// From .thread.flow
 	perThreadFlowMetrics = []metricInfo{
+		// New in 7.0.0: b0993d6fd8ffb6abafdea9324cd0166106af1851
+		newPerThreadCounterMetric("flow", "all_total", "", "total").Optional(),
+		newPerThreadGaugeMetric("flow", "active_flows", "", "active").Optional(),
 		newPerThreadCounterMetric("flow", "tcp_total", "", "tcp"),
 		newPerThreadCounterMetric("flow", "udp_total", "", "udp"),
+		// New in 8.0.0: 0aea82677644a7e9476059a8be4d29953e4ab712
+		newPerThreadCounterMetric("flow", "elephant_total", "", "elephant").Optional(),
 		newPerThreadCounterMetric("flow", "icmpv4_total", "", "icmpv4"),
 		newPerThreadCounterMetric("flow", "icmpv6_total", "", "icmpv6"),
 		newPerThreadCounterMetric("flow", "tcp_reuse_total", "", "tcp_reuse"),
+		newPerThreadCounterMetric("flow", "get_used_total", "", "get_used").Optional(),
+		newPerThreadCounterMetric("flow", "get_used_eval_total", "", "get_used_eval").Optional(),
+		newPerThreadCounterMetric("flow", "get_used_eval_reject_total", "", "get_used_eval_reject").Optional(),
+		newPerThreadCounterMetric("flow", "get_used_eval_busy_total", "", "get_used_eval_busy").Optional(),
+		newPerThreadCounterMetric("flow", "get_used_failed_total", "", "get_used_failed_total").Optional(),
 	}
 
 	// From .thread.flow.wrk
@@ -173,7 +191,37 @@ var (
 		newPerThreadCounterMetric("flow_wrk", "flows_evicted_pkt_inject_total", "", "flows_evicted_pkt_inject"),
 		newPerThreadCounterMetric("flow_wrk", "flows_evicted_total", "", "flows_evicted"),
 		newPerThreadCounterMetric("flow_wrk", "flows_injected_total", "", "flows_injected"),
-		newPerThreadCounterMetric("flow_wrk", "flows_evicted_needs_work", "", "flows_evicted_needs_work"),
+		newPerThreadGaugeMetric("flow_wrk", "flows_injected_max", "", "flows_injected_max").Optional(),
+	}
+
+	// From .thread.flow.end
+	perThreadFlowEndMetrics = []metricInfo{
+		newPerThreadCounterMetric("flow_end", "tcp_liberal_total", "", "tcp_liberal").Optional(),
+	}
+
+	// From .thread.flow.end.state
+	// New in 7.0.0: b0993d6fd8ffb6abafdea9324cd0166106af1851
+	perThreadFlowEndStateMetrics = []metricInfo{
+		newPerThreadCounterMetric("flow_end_state", "new_total", "", "new").Optional(),
+		newPerThreadCounterMetric("flow_end_state", "established_total", "", "established").Optional(),
+		newPerThreadCounterMetric("flow_end_state", "closed_total", "", "closed").Optional(),
+		newPerThreadCounterMetric("flow_end_state", "local_bypassed_total", "", "local_bypassed").Optional(),
+		newPerThreadCounterMetric("flow_end_state", "capture_bypassed_total", "", "capture_bypassed").Optional(),
+	}
+
+	// From .thread.flow.end.tcp_state
+	// New in 7.0.0: b0993d6fd8ffb6abafdea9324cd0166106af1851
+	perThreadFlowEndTcpStateMetrics = []metricInfo{
+		newPerThreadCounterMetric("flow_end_tcpstate", "syn_sent_total", "", "syn_sent").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "syn_recv_total", "", "syn_recv").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "established_total", "", "established").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "fin_wait1_total", "", "fin_wait1").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "fin_wait2_total", "", "fin_wait2").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "time_wait_total", "", "time_wait").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "last_ack_total", "", "last_ack").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "close_wait_total", "", "close_wait").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "closing_total", "", "closing").Optional(),
+		newPerThreadCounterMetric("flow_end_tcpstate", "closed_total", "", "closed").Optional(),
 	}
 
 	// From .thread.defrag
@@ -191,7 +239,13 @@ var (
 		newPerThreadCounterMetric("defrag", "ipv6_timeouts_total", "", "timeouts").Optional(),
 	}
 	perThreadDefragMetrics = []metricInfo{
-		newPerThreadGaugeMetric("defrag", "max_frag_hits", "", "max_frag_hits"),
+		// Removed in 8.0.0: 83dc703d1fd5a435178f220a3e79cd65b73b4cbb
+		newPerThreadGaugeMetric("defrag", "max_frag_hits", "", "max_frag_hits").Optional(),
+		// New in 8.0.0: 83dc703d1fd5a435178f220a3e79cd65b73b4cbb
+		newPerThreadGaugeMetric("defrag", "max_trackers_reached", "", "max_trackers_reached").Optional(),
+		newPerThreadGaugeMetric("defrag", "max_fragments_reached", "", "max_frags_reached").Optional(),
+		newPerThreadCounterMetric("defrag", "tracker_soft_reuse_total", "", "tracker_soft_reuse").Optional(),
+		newPerThreadCounterMetric("defrag", "tracker_hard_reuse_total", "", "tracker_hard_reuse").Optional(),
 	}
 
 	// From .thread.flow_bypassed
@@ -213,6 +267,8 @@ var (
 		newPerThreadCounterMetric("tcp", "syn_packets_total", "", "syn"),
 		newPerThreadCounterMetric("tcp", "synack_packets_total", "", "synack"),
 		newPerThreadCounterMetric("tcp", "rst_packets_total", "", "rst"),
+		// New in 8.0.0: 6882bcb3e51bd3cf509fb6569cc30f48d7bb53d7
+		newPerThreadCounterMetric("tcp", "urg_packets_total", "", "urg").Optional(),
 	}
 
 	// From .thread.tcp
@@ -230,7 +286,8 @@ var (
 		newPerThreadCounterMetric("tcp", "sessions_total", "", "sessions"),
 		newPerThreadCounterMetric("tcp", "ssn_memcap_drop_total", "", "ssn_memcap_drop"),
 		newPerThreadCounterMetric("tcp", "pseudo_total", "", "pseudo"),
-		newPerThreadCounterMetric("tcp", "pseudo_failed_total", "", "pseudo"),
+		// Removed in 8.0.0 b967fcaf8f6fee4ddbe9f3276fcb7e5e8139b993
+		newPerThreadCounterMetric("tcp", "pseudo_failed_total", "", "pseudo_failed").Optional(),
 		newPerThreadCounterMetric("tcp", "invalid_checksum_packets_total", "", "invalid_checksum"),
 		// Removed in 7.0.0: 0360cb654293c333e3be70204705fa7ec328512e
 		newPerThreadCounterMetric("tcp", "no_flow_total", "", "no_flow").Optional(),
@@ -245,6 +302,8 @@ var (
 		newPerThreadCounterMetric("tcp", "insert_data_overlap_fail_total", "", "insert_data_overlap_fail"),
 		// Removed in 7.0.0: f34845858ccc011d4dfffcf111d1b779ba133763
 		newPerThreadCounterMetric("tcp", "insert_list_fail_total", "", "insert_list_fail").Optional(),
+		// New in 8.0.0: 6882bcb3e51bd3cf509fb6569cc30f48d7bb53d7
+		newPerThreadCounterMetric("tcp", "urgent_oob_data_total", "", "urgent_oob_data").Optional(),
 	}
 
 	// From .thread.detect
@@ -253,6 +312,12 @@ var (
 		// New in 7.0.0
 		newPerThreadCounterMetric("detect", "alert_queue_overflows_total", "", "alert_queue_overflow").Optional(),
 		newPerThreadCounterMetric("detect", "alerts_suppressed_total", "", "alerts_suppressed").Optional(),
+	}
+
+	// From .thread.file_store
+	perThreadFileStoreMetrics = []metricInfo{
+		newPerThreadGaugeMetric("filestore", "open_files_max_hit", "", "open_files_max_hit").Optional(),
+		newPerThreadCounterMetric("filestore", "fs_errors_total", "", "fs_errors").Optional(),
 	}
 
 	// From: .thread.app_layer, labeled with the key. I think summing
@@ -270,6 +335,8 @@ var (
 		newPerThreadCounterMetric("flow_mgr", "new_pruned_total", "", "new_pruned").Optional(),
 		newPerThreadCounterMetric("flow_mgr", "est_pruned_total", "", "est_pruned").Optional(),
 		newPerThreadCounterMetric("flow_mgr", "bypassed_pruned_total", "", "bypassed_pruned").Optional(),
+		// Add in 7.0.0: 88edc8630c6dd3ff659d23cc7e21f361bec0ce72
+		newPerThreadGaugeMetric("flow_mgr", "rows_per_sec", "", "rows_per_sec").Optional(),
 		newPerThreadGaugeMetric("flow_mgr", "rows_maxlen", "", "rows_maxlen"),
 		newPerThreadCounterMetric("flow_mgr", "flows_checked_total", "", "flows_checked"),
 		newPerThreadCounterMetric("flow_mgr", "flows_notimeout_total", "", "flows_notimeout"),
@@ -305,6 +372,12 @@ var (
 		newCounterMetric("flow", "emerg_mode_entered_total", "", "emerg_mode_entered"),
 		newCounterMetric("flow", "emerg_mode_over_total", "", "emerg_mode_over"),
 		newGaugeMetric("flow", "memuse_bytes", "", "memuse"),
+	}
+
+	// From .message.defrag
+	// Add in 8.0.0: 83dc703d1fd5a435178f220a3e79cd65b73b4cbb
+	globalDefragMetrics = []metricInfo{
+		newGaugeMetric("defrag", "memuse_bytes", "", "memuse").Optional(),
 	}
 
 	// From .message.{http,ftp}
@@ -608,6 +681,17 @@ func handleReceiveCommon(ch chan<- prometheus.Metric, threadName string, thread 
 		}
 	}
 
+	// Handle decoder events
+	event := decoder["event"].(map[string]any)
+
+	if event_afpacket, ok := event["afpacket"].(map[string]any); ok {
+		for _, m := range perThreadDecoderEventAFPacketMetrics {
+			if cm := newConstMetric(m, event_afpacket, threadName); cm != nil {
+				ch <- cm
+			}
+		}
+	}
+
 	// Defrag stats from worker and receive threads.
 	defrag := thread["defrag"].(map[string]any)
 	defragIpv4 := defrag["ipv4"].(map[string]any)
@@ -660,6 +744,34 @@ func handleTransmitThread(ch chan<- prometheus.Metric, threadName string, thread
 	handleIps(ch, threadName, thread)
 }
 
+func handleFlowEndCommon(ch chan<- prometheus.Metric, threadName string, flow map[string]any) {
+	// Handle flow end metrics in common between WK and FR threads.
+
+	if end, ok := flow["end"].(map[string]any); ok {
+		for _, m := range perThreadFlowEndMetrics {
+			if cm := newConstMetric(m, end, threadName); cm != nil {
+				ch <- cm
+			}
+		}
+
+		if state, ok := end["state"].(map[string]any); ok {
+			for _, m := range perThreadFlowEndStateMetrics {
+				if cm := newConstMetric(m, state, threadName); cm != nil {
+					ch <- cm
+				}
+			}
+		}
+
+		if tcp_state, ok := end["tcp_state"].(map[string]any); ok {
+			for _, m := range perThreadFlowEndTcpStateMetrics {
+				if cm := newConstMetric(m, tcp_state, threadName); cm != nil {
+					ch <- cm
+				}
+			}
+		}
+	}
+}
+
 func handleWorkerThread(ch chan<- prometheus.Metric, threadName string, thread map[string]any) {
 	handleReceiveCommon(ch, threadName, thread)
 	handleIps(ch, threadName, thread)
@@ -685,10 +797,22 @@ func handleWorkerThread(ch chan<- prometheus.Metric, threadName string, thread m
 		}
 	}
 
+	// Handle flow end metrics
+	handleFlowEndCommon(ch, threadName, flow)
+
 	detect := thread["detect"].(map[string]any)
 	for _, m := range perThreadDetectMetrics {
 		if cm := newConstMetric(m, detect, threadName); cm != nil {
 			ch <- cm
+		}
+	}
+
+	// If enabled in Suricata configuration
+	if file_store, ok := thread["file_store"].(map[string]any); ok {
+		for _, m := range perThreadFileStoreMetrics {
+			if cm := newConstMetric(m, file_store, threadName); cm != nil {
+				ch <- cm
+			}
 		}
 	}
 
@@ -744,7 +868,10 @@ func handleFlowRecyclerThread(ch chan<- prometheus.Metric, threadName string, th
 		}
 	}
 
-	// There's more in the "end" section.
+	if threadName != "Total" {
+		// Handle flow end metrics
+		handleFlowEndCommon(ch, threadName, flow)
+	}
 }
 
 // Handle global metrics.
@@ -767,6 +894,16 @@ func handleGlobal(ch chan<- prometheus.Metric, message map[string]any) {
 		}
 	} else {
 		log.Printf("WARN: No top-level flow entry message")
+	}
+
+	if globalDefrag, ok := message["defrag"].(map[string]any); ok {
+		for _, m := range globalDefragMetrics {
+			if cm := newConstMetric(m, globalDefrag); cm != nil {
+				ch <- cm
+			}
+		}
+	} else {
+		log.Printf("WARN: No top-level defrag entry message")
 	}
 
 	if globalHttp, ok := message["http"].(map[string]any); ok {
@@ -813,6 +950,14 @@ func handleGlobal(ch chan<- prometheus.Metric, message map[string]any) {
 		log.Printf("WARN: No top-level detect entry")
 	}
 
+	if *totals {
+		// Export the overall global metrics calculated as the sum of all threads.
+		// The entries defined at the top-level have the same structure of the thread ones
+		handleWorkerThread(ch, "Total", message)
+		handleFlowManagerThread(ch, "Total", message)
+		handleFlowRecyclerThread(ch, "Total", message)
+	}
+
 }
 
 func produceMetrics(ch chan<- prometheus.Metric, counters map[string]any) {
@@ -822,33 +967,35 @@ func produceMetrics(ch chan<- prometheus.Metric, counters map[string]any) {
 	// Uptime metric
 	ch <- newConstMetric(metricUptime, message)
 
-	// Produce per thread metrics
-	for threadName, thread_ := range message["threads"].(map[string]any) {
-		if thread, ok := thread_.(map[string]any); ok {
-			if strings.HasPrefix(threadName, "W#") || strings.HasPrefix(threadName, "W-") {
-				handleWorkerThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "RX") {
-				handleReceiveThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "TX") {
-				handleTransmitThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "FM") {
-				handleFlowManagerThread(ch, threadName, thread)
-			} else if strings.HasPrefix(threadName, "FR") {
-				handleFlowRecyclerThread(ch, threadName, thread)
-			} else if threadName == "Global" {
-				// Skip
-			} else if threadName == "NapatechStats" {
-				// Skip
+	// Produce per thread metrics if not in totals mode.
+	if !*totals {
+		for threadName, thread_ := range message["threads"].(map[string]any) {
+			if thread, ok := thread_.(map[string]any); ok {
+				if strings.HasPrefix(threadName, "W#") || strings.HasPrefix(threadName, "W-") {
+					handleWorkerThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "RX") {
+					handleReceiveThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "TX") {
+					handleTransmitThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "FM") {
+					handleFlowManagerThread(ch, threadName, thread)
+				} else if strings.HasPrefix(threadName, "FR") {
+					handleFlowRecyclerThread(ch, threadName, thread)
+				} else if threadName == "Global" {
+					// Skip
+				} else if threadName == "NapatechStats" {
+					// Skip
+				} else {
+					log.Printf("WARN: Unhandled thread: %s", threadName)
+				}
 			} else {
-				log.Printf("WARN: Unhandled thread: %s", threadName)
-			}
-		} else {
-			// The following two show up under threads in 7.0.x,
-			// ignore them.
-			//
-			// https://redmine.openinfosecfoundation.org/issues/6398
-			if threadName != "memcap_pressure" && threadName != "memcap_pressure_max" {
-				log.Printf("WARN: Threads entry %s not a map[string]", threadName)
+				// The following two show up under threads in 7.0.x,
+				// ignore them.
+				//
+				// https://redmine.openinfosecfoundation.org/issues/6398
+				if threadName != "memcap_pressure" && threadName != "memcap_pressure_max" {
+					log.Printf("WARN: Threads entry %s not a map[string]", threadName)
+				}
 			}
 		}
 	}
@@ -900,6 +1047,7 @@ var (
 	addr        = flag.String("web.listen-address", ":9917", "Address to listen on")
 	path        = flag.String("web.telemetry-path", "/metrics", "Path for metrics")
 	quiet       = flag.Bool("quiet", false, "Suppress log output")
+	totals      = flag.Bool("totals", false, "Export the overall global total metrics.")
 )
 
 func main() {

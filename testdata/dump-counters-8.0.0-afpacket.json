@@ -1,0 +1,6087 @@
+{
+  "message": {
+    "uptime": 134,
+    "capture": {
+      "kernel_packets": 3060,
+      "kernel_drops": 0,
+      "errors": 0,
+      "afpacket": {
+        "busy_loop_avg": 0,
+        "polls": 10352,
+        "poll_signal": 16,
+        "poll_timeout": 9742,
+        "poll_data": 594,
+        "poll_errors": 0,
+        "send_errors": 0
+      }
+    },
+    "decoder": {
+      "pkts": 3062,
+      "bytes": 1498264,
+      "invalid": 0,
+      "ipv4": 3038,
+      "ipv6": 13,
+      "ethernet": 3062,
+      "arp": 11,
+      "unknown_ethertype": 0,
+      "chdlc": 0,
+      "raw": 0,
+      "null": 0,
+      "sll": 0,
+      "sll2": 0,
+      "tcp": 2780,
+      "udp": 259,
+      "sctp": 0,
+      "esp": 0,
+      "icmpv4": 0,
+      "icmpv6": 10,
+      "ppp": 0,
+      "pppoe": 0,
+      "geneve": 0,
+      "gre": 0,
+      "vlan": 0,
+      "vlan_qinq": 0,
+      "vlan_qinqinq": 0,
+      "vxlan": 0,
+      "vntag": 0,
+      "ieee8021ah": 0,
+      "teredo": 0,
+      "ipv4_in_ipv4": 0,
+      "ipv6_in_ipv4": 0,
+      "ipv4_in_ipv6": 0,
+      "ipv6_in_ipv6": 0,
+      "mpls": 0,
+      "avg_pkt_size": 489,
+      "max_pkt_size": 1399,
+      "max_mac_addrs_src": 0,
+      "max_mac_addrs_dst": 0,
+      "erspan": 0,
+      "nsh": 0,
+      "event": {
+        "afpacket": {
+          "trunc_pkt": 0
+        },
+        "ipv4": {
+          "pkt_too_small": 0,
+          "hlen_too_small": 0,
+          "iplen_smaller_than_hlen": 0,
+          "trunc_pkt": 0,
+          "opt_invalid": 0,
+          "opt_invalid_len": 0,
+          "opt_malformed": 0,
+          "opt_pad_required": 2,
+          "opt_eol_required": 0,
+          "opt_duplicate": 0,
+          "opt_unknown": 0,
+          "wrong_ip_version": 0,
+          "icmpv6": 0,
+          "frag_pkt_too_large": 0,
+          "frag_overlap": 0,
+          "frag_ignored": 0
+        },
+        "icmpv4": {
+          "pkt_too_small": 0,
+          "unknown_type": 0,
+          "unknown_code": 0,
+          "ipv4_trunc_pkt": 0,
+          "ipv4_unknown_ver": 0
+        },
+        "icmpv6": {
+          "unknown_type": 0,
+          "unknown_code": 0,
+          "pkt_too_small": 0,
+          "ipv6_unknown_version": 0,
+          "ipv6_trunc_pkt": 0,
+          "mld_message_with_invalid_hl": 0,
+          "unassigned_type": 0,
+          "experimentation_type": 0
+        },
+        "ipv6": {
+          "pkt_too_small": 0,
+          "trunc_pkt": 0,
+          "trunc_exthdr": 0,
+          "exthdr_dupl_fh": 0,
+          "exthdr_useless_fh": 0,
+          "exthdr_dupl_rh": 0,
+          "exthdr_dupl_hh": 0,
+          "exthdr_dupl_dh": 0,
+          "exthdr_dupl_ah": 0,
+          "exthdr_dupl_eh": 0,
+          "exthdr_invalid_optlen": 0,
+          "wrong_ip_version": 0,
+          "exthdr_ah_res_not_null": 0,
+          "hopopts_unknown_opt": 0,
+          "hopopts_only_padding": 0,
+          "dstopts_unknown_opt": 0,
+          "dstopts_only_padding": 0,
+          "rh_type_0": 0,
+          "zero_len_padn": 4,
+          "fh_non_zero_reserved_field": 0,
+          "data_after_none_header": 0,
+          "unknown_next_header": 0,
+          "icmpv4": 0,
+          "frag_pkt_too_large": 0,
+          "frag_overlap": 0,
+          "frag_invalid_length": 0,
+          "frag_ignored": 0,
+          "ipv4_in_ipv6_too_small": 0,
+          "ipv4_in_ipv6_wrong_version": 0,
+          "ipv6_in_ipv6_too_small": 0,
+          "ipv6_in_ipv6_wrong_version": 0
+        },
+        "tcp": {
+          "pkt_too_small": 0,
+          "hlen_too_small": 0,
+          "invalid_optlen": 0,
+          "opt_invalid_len": 0,
+          "opt_duplicate": 0
+        },
+        "udp": {
+          "pkt_too_small": 0,
+          "hlen_too_small": 0,
+          "hlen_invalid": 0,
+          "len_invalid": 0
+        },
+        "sll": {
+          "pkt_too_small": 0
+        },
+        "sll2": {
+          "pkt_too_small": 0
+        },
+        "ethernet": {
+          "pkt_too_small": 0,
+          "unknown_ethertype": 0
+        },
+        "ppp": {
+          "pkt_too_small": 0,
+          "vju_pkt_too_small": 0,
+          "ip4_pkt_too_small": 0,
+          "ip6_pkt_too_small": 0,
+          "wrong_type": 0,
+          "unsup_proto": 0
+        },
+        "pppoe": {
+          "pkt_too_small": 0,
+          "wrong_code": 0,
+          "malformed_tags": 0
+        },
+        "gre": {
+          "pkt_too_small": 0,
+          "wrong_version": 0,
+          "version0_recur": 0,
+          "version0_flags": 0,
+          "version0_hdr_too_big": 0,
+          "version0_malformed_sre_hdr": 0,
+          "version1_chksum": 0,
+          "version1_route": 0,
+          "version1_ssr": 0,
+          "version1_recur": 0,
+          "version1_flags": 0,
+          "version1_no_key": 0,
+          "version1_wrong_protocol": 0,
+          "version1_malformed_sre_hdr": 0,
+          "version1_hdr_too_big": 0
+        },
+        "vlan": {
+          "header_too_small": 0,
+          "unknown_type": 0,
+          "too_many_layers": 0
+        },
+        "ieee8021ah": {
+          "header_too_small": 0
+        },
+        "vntag": {
+          "header_too_small": 0,
+          "unknown_type": 0
+        },
+        "ipraw": {
+          "invalid_ip_version": 0
+        },
+        "ltnull": {
+          "pkt_too_small": 0,
+          "unsupported_type": 0
+        },
+        "sctp": {
+          "pkt_too_small": 0
+        },
+        "esp": {
+          "pkt_too_small": 0
+        },
+        "mpls": {
+          "header_too_small": 0,
+          "pkt_too_small": 0,
+          "bad_label_router_alert": 0,
+          "bad_label_implicit_null": 0,
+          "bad_label_reserved": 0,
+          "unknown_payload_type": 0
+        },
+        "vxlan": {
+          "unknown_payload_type": 0
+        },
+        "geneve": {
+          "unknown_payload_type": 0
+        },
+        "erspan": {
+          "header_too_small": 0,
+          "unsupported_version": 0,
+          "too_many_vlan_layers": 0
+        },
+        "dce": {
+          "pkt_too_small": 0
+        },
+        "chdlc": {
+          "pkt_too_small": 0
+        },
+        "nsh": {
+          "header_too_small": 0,
+          "unsupported_version": 0,
+          "bad_header_length": 0,
+          "reserved_type": 0,
+          "unsupported_type": 0,
+          "unknown_payload": 0
+        }
+      },
+      "too_many_layers": 0
+    },
+    "tcp": {
+      "syn": 24,
+      "synack": 24,
+      "rst": 20,
+      "urg": 0,
+      "active_sessions": 15,
+      "sessions": 24,
+      "ssn_memcap_drop": 0,
+      "ssn_from_cache": 1,
+      "ssn_from_pool": 23,
+      "pseudo": 0,
+      "invalid_checksum": 0,
+      "midstream_pickups": 0,
+      "pkt_on_wrong_thread": 0,
+      "ack_unseen_data": 0,
+      "segment_memcap_drop": 0,
+      "segment_from_cache": 1160,
+      "segment_from_pool": 109,
+      "stream_depth_reached": 0,
+      "reassembly_gap": 0,
+      "overlap": 6,
+      "overlap_diff_data": 0,
+      "insert_data_normal_fail": 0,
+      "insert_data_overlap_fail": 0,
+      "urgent_oob_data": 0,
+      "memuse": 4980776,
+      "reassembly_memuse": 1050624
+    },
+    "flow": {
+      "memcap": 0,
+      "total": 115,
+      "active": 96,
+      "tcp": 24,
+      "udp": 86,
+      "icmpv4": 0,
+      "icmpv6": 5,
+      "tcp_reuse": 0,
+      "elephant": 0,
+      "get_used": 0,
+      "get_used_eval": 0,
+      "get_used_eval_reject": 0,
+      "get_used_eval_busy": 0,
+      "get_used_failed": 0,
+      "wrk": {
+        "spare_sync_avg": 100,
+        "spare_sync": 8,
+        "spare_sync_incomplete": 0,
+        "spare_sync_empty": 0,
+        "flows_evicted_needs_work": 8,
+        "flows_evicted_pkt_inject": 16,
+        "flows_evicted": 0,
+        "flows_injected": 8,
+        "flows_injected_max": 0
+      },
+      "end": {
+        "state": {
+          "new": 10,
+          "established": 0,
+          "closed": 9,
+          "local_bypassed": 0,
+          "capture_bypassed": 0
+        },
+        "tcp_state": {
+          "none": 0,
+          "syn_sent": 0,
+          "syn_recv": 0,
+          "established": 0,
+          "fin_wait1": 0,
+          "fin_wait2": 0,
+          "time_wait": 0,
+          "last_ack": 2,
+          "close_wait": 0,
+          "closing": 0,
+          "closed": 7
+        },
+        "tcp_liberal": 0
+      },
+      "mgr": {
+        "full_hash_pass": 12,
+        "rows_per_sec": 6553,
+        "rows_maxlen": 2,
+        "flows_checked": 143,
+        "flows_notimeout": 124,
+        "flows_timeout": 19,
+        "flows_evicted": 19,
+        "flows_evicted_needs_work": 8
+      },
+      "spare": 9211,
+      "emerg_mode_entered": 0,
+      "emerg_mode_over": 0,
+      "recycler": {
+        "recycled": 11,
+        "queue_avg": 0,
+        "queue_max": 1
+      },
+      "memuse": 7234304
+    },
+    "defrag": {
+      "ipv4": {
+        "fragments": 0,
+        "reassembled": 0
+      },
+      "ipv6": {
+        "fragments": 0,
+        "reassembled": 0
+      },
+      "max_trackers_reached": 0,
+      "max_frags_reached": 0,
+      "tracker_soft_reuse": 0,
+      "tracker_hard_reuse": 0,
+      "wrk": {
+        "tracker_timeout": 0
+      },
+      "mgr": {
+        "tracker_timeout": 0
+      },
+      "memuse": 33554432
+    },
+    "flow_bypassed": {
+      "local_pkts": 0,
+      "local_bytes": 0,
+      "local_capture_pkts": 0,
+      "local_capture_bytes": 0,
+      "closed": 0,
+      "pkts": 0,
+      "bytes": 0
+    },
+    "detect": {
+      "engines": [
+        {
+          "id": 0,
+          "last_reload": "2025-07-23T11:37:58.727880+0200",
+          "rules_loaded": 0,
+          "rules_failed": 0,
+          "rules_skipped": 0
+        }
+      ],
+      "alert": 0,
+      "alert_queue_overflow": 0,
+      "alerts_suppressed": 0,
+      "lua": {
+        "errors": 0,
+        "blocked_function_errors": 0,
+        "instruction_limit_errors": 0,
+        "memory_limit_errors": 0
+      }
+    },
+    "app_layer": {
+      "flow": {
+        "failed_tcp": 0,
+        "http": 3,
+        "ftp": 0,
+        "smtp": 0,
+        "tls": 19,
+        "ssh": 0,
+        "imap": 2,
+        "smb": 0,
+        "dcerpc_tcp": 0,
+        "dns_tcp": 0,
+        "nfs_tcp": 0,
+        "ntp": 1,
+        "ftp-data": 0,
+        "tftp": 0,
+        "ike": 0,
+        "krb5_tcp": 0,
+        "quic": 1,
+        "dhcp": 2,
+        "sip_tcp": 0,
+        "rfb": 0,
+        "mqtt": 0,
+        "telnet": 0,
+        "websocket": 0,
+        "ldap_tcp": 0,
+        "doh2": 0,
+        "rdp": 0,
+        "http2": 0,
+        "bittorrent-dht": 0,
+        "pop3": 0,
+        "mdns": 2,
+        "snmp": 0,
+        "failed_udp": 0,
+        "dcerpc_udp": 0,
+        "dns_udp": 80,
+        "nfs_udp": 0,
+        "krb5_udp": 0,
+        "sip_udp": 0,
+        "ldap_udp": 0
+      },
+      "error": {
+        "failed_tcp": {
+          "gap": 0
+        },
+        "http": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "ftp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "smtp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "tls": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "ssh": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "imap": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "smb": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "dcerpc_tcp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "dns_tcp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "nfs_tcp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "ntp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "ftp-data": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "tftp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "ike": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "krb5_tcp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "quic": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "dhcp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "sip_tcp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "rfb": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "mqtt": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "telnet": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "websocket": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "ldap_tcp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "doh2": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "rdp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "http2": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "bittorrent-dht": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "pop3": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "mdns": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "snmp": {
+          "gap": 0,
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "dcerpc_udp": {
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "dns_udp": {
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "nfs_udp": {
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "krb5_udp": {
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "sip_udp": {
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        },
+        "ldap_udp": {
+          "alloc": 0,
+          "parser": 0,
+          "internal": 0
+        }
+      },
+      "tx": {
+        "http": 7,
+        "ftp": 0,
+        "smtp": 0,
+        "tls": 0,
+        "ssh": 0,
+        "imap": 0,
+        "smb": 0,
+        "dcerpc_tcp": 0,
+        "dns_tcp": 0,
+        "nfs_tcp": 0,
+        "ntp": 1,
+        "ftp-data": 0,
+        "tftp": 0,
+        "ike": 0,
+        "krb5_tcp": 0,
+        "quic": 2,
+        "dhcp": 3,
+        "sip_tcp": 0,
+        "rfb": 0,
+        "mqtt": 0,
+        "telnet": 0,
+        "websocket": 0,
+        "ldap_tcp": 0,
+        "doh2": 0,
+        "rdp": 0,
+        "http2": 0,
+        "bittorrent-dht": 0,
+        "pop3": 0,
+        "mdns": 9,
+        "snmp": 0,
+        "dcerpc_udp": 0,
+        "dns_udp": 238,
+        "nfs_udp": 0,
+        "krb5_udp": 0,
+        "sip_udp": 0,
+        "ldap_udp": 0
+      },
+      "expectations": 0
+    },
+    "memcap": {
+      "pressure": 7,
+      "pressure_max": 7
+    },
+    "http": {
+      "memuse": 672,
+      "memcap": 0,
+      "byterange": {
+        "memuse": 168384,
+        "memcap": 104857600
+      }
+    },
+    "ftp": {
+      "memuse": 0,
+      "memcap": 0
+    },
+    "ippair": {
+      "memuse": 398144,
+      "memcap": 398144
+    },
+    "host": {
+      "memuse": 382144,
+      "memcap": 33554432
+    },
+    "file_store": {
+      "open_files": 0
+    },
+    "threads": {
+      "W#01-wlan0": {
+        "capture": {
+          "kernel_packets": 71,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1261,
+            "poll_signal": 2,
+            "poll_timeout": 1232,
+            "poll_data": 27,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 71,
+          "bytes": 9699,
+          "invalid": 0,
+          "ipv4": 71,
+          "ipv6": 0,
+          "ethernet": 71,
+          "arp": 0,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 25,
+          "udp": 46,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 136,
+          "max_pkt_size": 1304,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 0,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 0,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 1,
+          "synack": 1,
+          "rst": 3,
+          "urg": 0,
+          "active_sessions": 0,
+          "sessions": 1,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 0,
+          "ssn_from_pool": 1,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 8,
+          "segment_from_pool": 4,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 0,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 17,
+          "active": 16,
+          "tcp": 1,
+          "udp": 16,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 1,
+            "flows_evicted_pkt_inject": 2,
+            "flows_evicted": 0,
+            "flows_injected": 1,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 1,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 0,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 1
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 1,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 1,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 15,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 1,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 44,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "W#02-wlan0": {
+        "capture": {
+          "kernel_packets": 140,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1265,
+            "poll_signal": 2,
+            "poll_timeout": 1229,
+            "poll_data": 34,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 140,
+          "bytes": 43692,
+          "invalid": 0,
+          "ipv4": 138,
+          "ipv6": 2,
+          "ethernet": 140,
+          "arp": 0,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 120,
+          "udp": 18,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 2,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 312,
+          "max_pkt_size": 1304,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 0,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 2,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 2,
+          "synack": 2,
+          "rst": 3,
+          "urg": 0,
+          "active_sessions": 1,
+          "sessions": 2,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 0,
+          "ssn_from_pool": 2,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 54,
+          "segment_from_pool": 15,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 0,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 10,
+          "active": 9,
+          "tcp": 2,
+          "udp": 7,
+          "icmpv4": 0,
+          "icmpv6": 1,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 1,
+            "flows_evicted_pkt_inject": 2,
+            "flows_evicted": 0,
+            "flows_injected": 1,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 1,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 1,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 0
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 2,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 7,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 18,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "W#03-wlan0": {
+        "capture": {
+          "kernel_packets": 82,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1256,
+            "poll_signal": 2,
+            "poll_timeout": 1232,
+            "poll_data": 22,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 82,
+          "bytes": 23701,
+          "invalid": 0,
+          "ipv4": 80,
+          "ipv6": 2,
+          "ethernet": 82,
+          "arp": 0,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 46,
+          "udp": 34,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 2,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 289,
+          "max_pkt_size": 1304,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 0,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 2,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 1,
+          "synack": 1,
+          "rst": 3,
+          "urg": 0,
+          "active_sessions": 0,
+          "sessions": 1,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 0,
+          "ssn_from_pool": 1,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 18,
+          "segment_from_pool": 7,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 0,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 13,
+          "active": 12,
+          "tcp": 1,
+          "udp": 11,
+          "icmpv4": 0,
+          "icmpv6": 1,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 1,
+            "flows_evicted_pkt_inject": 2,
+            "flows_evicted": 0,
+            "flows_injected": 1,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 1,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 1,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 0
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 1,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 11,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 34,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "W#04-wlan0": {
+        "capture": {
+          "kernel_packets": 208,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1281,
+            "poll_signal": 2,
+            "poll_timeout": 1219,
+            "poll_data": 60,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 208,
+          "bytes": 68213,
+          "invalid": 0,
+          "ipv4": 208,
+          "ipv6": 0,
+          "ethernet": 208,
+          "arp": 0,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 184,
+          "udp": 24,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 327,
+          "max_pkt_size": 1304,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 0,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 0,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 4,
+          "synack": 4,
+          "rst": 3,
+          "urg": 0,
+          "active_sessions": 3,
+          "sessions": 4,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 0,
+          "ssn_from_pool": 4,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 89,
+          "segment_from_pool": 12,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 1,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 13,
+          "active": 12,
+          "tcp": 4,
+          "udp": 9,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 1,
+            "flows_evicted_pkt_inject": 2,
+            "flows_evicted": 0,
+            "flows_injected": 1,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 1,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 0,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 1
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 4,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 9,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 24,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "W#05-wlan0": {
+        "capture": {
+          "kernel_packets": 758,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1329,
+            "poll_signal": 2,
+            "poll_timeout": 1194,
+            "poll_data": 133,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 758,
+          "bytes": 403792,
+          "invalid": 0,
+          "ipv4": 744,
+          "ipv6": 3,
+          "ethernet": 758,
+          "arp": 11,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 702,
+          "udp": 45,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 532,
+          "max_pkt_size": 1304,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 0,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 0,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 6,
+          "synack": 6,
+          "rst": 5,
+          "urg": 0,
+          "active_sessions": 4,
+          "sessions": 6,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 0,
+          "ssn_from_pool": 6,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 346,
+          "segment_from_pool": 16,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 5,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 20,
+          "active": 18,
+          "tcp": 6,
+          "udp": 14,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 2,
+            "flows_evicted_pkt_inject": 4,
+            "flows_evicted": 0,
+            "flows_injected": 2,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 2,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 0,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 2
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 5,
+            "ssh": 0,
+            "imap": 1,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 1,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 13,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 3,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 42,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "W#06-wlan0": {
+        "capture": {
+          "kernel_packets": 1613,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1426,
+            "poll_signal": 2,
+            "poll_timeout": 1187,
+            "poll_data": 237,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 1614,
+          "bytes": 910714,
+          "invalid": 0,
+          "ipv4": 1614,
+          "ipv6": 0,
+          "ethernet": 1614,
+          "arp": 0,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 1577,
+          "udp": 37,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 564,
+          "max_pkt_size": 1399,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 0,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 0,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 5,
+          "synack": 5,
+          "rst": 2,
+          "urg": 0,
+          "active_sessions": 4,
+          "sessions": 5,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 1,
+          "ssn_from_pool": 4,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 606,
+          "segment_from_pool": 45,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 0,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 15,
+          "active": 14,
+          "tcp": 5,
+          "udp": 10,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 1,
+            "flows_evicted_pkt_inject": 2,
+            "flows_evicted": 0,
+            "flows_injected": 1,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 1,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 0,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 1
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 2,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 2,
+            "ssh": 0,
+            "imap": 1,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 1,
+            "dhcp": 1,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 8,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 5,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 2,
+            "dhcp": 2,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 28,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "W#07-wlan0": {
+        "capture": {
+          "kernel_packets": 144,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1279,
+            "poll_signal": 2,
+            "poll_timeout": 1213,
+            "poll_data": 64,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 145,
+          "bytes": 32164,
+          "invalid": 0,
+          "ipv4": 139,
+          "ipv6": 6,
+          "ethernet": 145,
+          "arp": 0,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 109,
+          "udp": 28,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 6,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 221,
+          "max_pkt_size": 1304,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 2,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 0,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 4,
+          "synack": 4,
+          "rst": 1,
+          "urg": 0,
+          "active_sessions": 3,
+          "sessions": 4,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 0,
+          "ssn_from_pool": 4,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 35,
+          "segment_from_pool": 6,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 0,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 17,
+          "active": 16,
+          "tcp": 4,
+          "udp": 10,
+          "icmpv4": 0,
+          "icmpv6": 3,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 1,
+            "flows_evicted_pkt_inject": 2,
+            "flows_evicted": 0,
+            "flows_injected": 1,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 1,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 0,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 1
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 1,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 3,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 1,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 9,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 2,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 0,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 6,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 22,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "W#08-wlan0": {
+        "capture": {
+          "kernel_packets": 44,
+          "kernel_drops": 0,
+          "errors": 0,
+          "afpacket": {
+            "busy_loop_avg": 0,
+            "polls": 1255,
+            "poll_signal": 2,
+            "poll_timeout": 1236,
+            "poll_data": 17,
+            "poll_errors": 0,
+            "send_errors": 0
+          }
+        },
+        "decoder": {
+          "pkts": 44,
+          "bytes": 6289,
+          "invalid": 0,
+          "ipv4": 44,
+          "ipv6": 0,
+          "ethernet": 44,
+          "arp": 0,
+          "unknown_ethertype": 0,
+          "chdlc": 0,
+          "raw": 0,
+          "null": 0,
+          "sll": 0,
+          "sll2": 0,
+          "tcp": 17,
+          "udp": 27,
+          "sctp": 0,
+          "esp": 0,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "ppp": 0,
+          "pppoe": 0,
+          "geneve": 0,
+          "gre": 0,
+          "vlan": 0,
+          "vlan_qinq": 0,
+          "vlan_qinqinq": 0,
+          "vxlan": 0,
+          "vntag": 0,
+          "ieee8021ah": 0,
+          "teredo": 0,
+          "ipv4_in_ipv4": 0,
+          "ipv6_in_ipv4": 0,
+          "ipv4_in_ipv6": 0,
+          "ipv6_in_ipv6": 0,
+          "mpls": 0,
+          "avg_pkt_size": 142,
+          "max_pkt_size": 1186,
+          "max_mac_addrs_src": 0,
+          "max_mac_addrs_dst": 0,
+          "erspan": 0,
+          "nsh": 0,
+          "event": {
+            "afpacket": {
+              "trunc_pkt": 0
+            },
+            "ipv4": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "iplen_smaller_than_hlen": 0,
+              "trunc_pkt": 0,
+              "opt_invalid": 0,
+              "opt_invalid_len": 0,
+              "opt_malformed": 0,
+              "opt_pad_required": 0,
+              "opt_eol_required": 0,
+              "opt_duplicate": 0,
+              "opt_unknown": 0,
+              "wrong_ip_version": 0,
+              "icmpv6": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_ignored": 0
+            },
+            "icmpv4": {
+              "pkt_too_small": 0,
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "ipv4_trunc_pkt": 0,
+              "ipv4_unknown_ver": 0
+            },
+            "icmpv6": {
+              "unknown_type": 0,
+              "unknown_code": 0,
+              "pkt_too_small": 0,
+              "ipv6_unknown_version": 0,
+              "ipv6_trunc_pkt": 0,
+              "mld_message_with_invalid_hl": 0,
+              "unassigned_type": 0,
+              "experimentation_type": 0
+            },
+            "ipv6": {
+              "pkt_too_small": 0,
+              "trunc_pkt": 0,
+              "trunc_exthdr": 0,
+              "exthdr_dupl_fh": 0,
+              "exthdr_useless_fh": 0,
+              "exthdr_dupl_rh": 0,
+              "exthdr_dupl_hh": 0,
+              "exthdr_dupl_dh": 0,
+              "exthdr_dupl_ah": 0,
+              "exthdr_dupl_eh": 0,
+              "exthdr_invalid_optlen": 0,
+              "wrong_ip_version": 0,
+              "exthdr_ah_res_not_null": 0,
+              "hopopts_unknown_opt": 0,
+              "hopopts_only_padding": 0,
+              "dstopts_unknown_opt": 0,
+              "dstopts_only_padding": 0,
+              "rh_type_0": 0,
+              "zero_len_padn": 0,
+              "fh_non_zero_reserved_field": 0,
+              "data_after_none_header": 0,
+              "unknown_next_header": 0,
+              "icmpv4": 0,
+              "frag_pkt_too_large": 0,
+              "frag_overlap": 0,
+              "frag_invalid_length": 0,
+              "frag_ignored": 0,
+              "ipv4_in_ipv6_too_small": 0,
+              "ipv4_in_ipv6_wrong_version": 0,
+              "ipv6_in_ipv6_too_small": 0,
+              "ipv6_in_ipv6_wrong_version": 0
+            },
+            "tcp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "invalid_optlen": 0,
+              "opt_invalid_len": 0,
+              "opt_duplicate": 0
+            },
+            "udp": {
+              "pkt_too_small": 0,
+              "hlen_too_small": 0,
+              "hlen_invalid": 0,
+              "len_invalid": 0
+            },
+            "sll": {
+              "pkt_too_small": 0
+            },
+            "sll2": {
+              "pkt_too_small": 0
+            },
+            "ethernet": {
+              "pkt_too_small": 0,
+              "unknown_ethertype": 0
+            },
+            "ppp": {
+              "pkt_too_small": 0,
+              "vju_pkt_too_small": 0,
+              "ip4_pkt_too_small": 0,
+              "ip6_pkt_too_small": 0,
+              "wrong_type": 0,
+              "unsup_proto": 0
+            },
+            "pppoe": {
+              "pkt_too_small": 0,
+              "wrong_code": 0,
+              "malformed_tags": 0
+            },
+            "gre": {
+              "pkt_too_small": 0,
+              "wrong_version": 0,
+              "version0_recur": 0,
+              "version0_flags": 0,
+              "version0_hdr_too_big": 0,
+              "version0_malformed_sre_hdr": 0,
+              "version1_chksum": 0,
+              "version1_route": 0,
+              "version1_ssr": 0,
+              "version1_recur": 0,
+              "version1_flags": 0,
+              "version1_no_key": 0,
+              "version1_wrong_protocol": 0,
+              "version1_malformed_sre_hdr": 0,
+              "version1_hdr_too_big": 0
+            },
+            "vlan": {
+              "header_too_small": 0,
+              "unknown_type": 0,
+              "too_many_layers": 0
+            },
+            "ieee8021ah": {
+              "header_too_small": 0
+            },
+            "vntag": {
+              "header_too_small": 0,
+              "unknown_type": 0
+            },
+            "ipraw": {
+              "invalid_ip_version": 0
+            },
+            "ltnull": {
+              "pkt_too_small": 0,
+              "unsupported_type": 0
+            },
+            "sctp": {
+              "pkt_too_small": 0
+            },
+            "esp": {
+              "pkt_too_small": 0
+            },
+            "mpls": {
+              "header_too_small": 0,
+              "pkt_too_small": 0,
+              "bad_label_router_alert": 0,
+              "bad_label_implicit_null": 0,
+              "bad_label_reserved": 0,
+              "unknown_payload_type": 0
+            },
+            "vxlan": {
+              "unknown_payload_type": 0
+            },
+            "geneve": {
+              "unknown_payload_type": 0
+            },
+            "erspan": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "too_many_vlan_layers": 0
+            },
+            "dce": {
+              "pkt_too_small": 0
+            },
+            "chdlc": {
+              "pkt_too_small": 0
+            },
+            "nsh": {
+              "header_too_small": 0,
+              "unsupported_version": 0,
+              "bad_header_length": 0,
+              "reserved_type": 0,
+              "unsupported_type": 0,
+              "unknown_payload": 0
+            }
+          },
+          "too_many_layers": 0
+        },
+        "tcp": {
+          "syn": 1,
+          "synack": 1,
+          "rst": 0,
+          "urg": 0,
+          "active_sessions": 1,
+          "sessions": 1,
+          "ssn_memcap_drop": 0,
+          "ssn_from_cache": 0,
+          "ssn_from_pool": 1,
+          "pseudo": 0,
+          "invalid_checksum": 0,
+          "midstream_pickups": 0,
+          "pkt_on_wrong_thread": 0,
+          "ack_unseen_data": 0,
+          "segment_memcap_drop": 0,
+          "segment_from_cache": 4,
+          "segment_from_pool": 4,
+          "stream_depth_reached": 0,
+          "reassembly_gap": 0,
+          "overlap": 0,
+          "overlap_diff_data": 0,
+          "insert_data_normal_fail": 0,
+          "insert_data_overlap_fail": 0,
+          "urgent_oob_data": 0
+        },
+        "flow": {
+          "memcap": 0,
+          "total": 10,
+          "active": 10,
+          "tcp": 1,
+          "udp": 9,
+          "icmpv4": 0,
+          "icmpv6": 0,
+          "tcp_reuse": 0,
+          "elephant": 0,
+          "get_used": 0,
+          "get_used_eval": 0,
+          "get_used_eval_reject": 0,
+          "get_used_eval_busy": 0,
+          "get_used_failed": 0,
+          "wrk": {
+            "spare_sync_avg": 100,
+            "spare_sync": 1,
+            "spare_sync_incomplete": 0,
+            "spare_sync_empty": 0,
+            "flows_evicted_needs_work": 0,
+            "flows_evicted_pkt_inject": 0,
+            "flows_evicted": 0,
+            "flows_injected": 0,
+            "flows_injected_max": 0
+          },
+          "end": {
+            "state": {
+              "new": 0,
+              "established": 0,
+              "closed": 0,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 0,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 0
+            },
+            "tcp_liberal": 0
+          }
+        },
+        "defrag": {
+          "ipv4": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "ipv6": {
+            "fragments": 0,
+            "reassembled": 0
+          },
+          "max_trackers_reached": 0,
+          "max_frags_reached": 0,
+          "tracker_soft_reuse": 0,
+          "tracker_hard_reuse": 0,
+          "wrk": {
+            "tracker_timeout": 0
+          }
+        },
+        "flow_bypassed": {
+          "local_pkts": 0,
+          "local_bytes": 0,
+          "local_capture_pkts": 0,
+          "local_capture_bytes": 0
+        },
+        "detect": {
+          "engines": [
+            {
+              "id": 0,
+              "last_reload": "2025-07-23T11:37:58.727880+0200",
+              "rules_loaded": 0,
+              "rules_failed": 0,
+              "rules_skipped": 0
+            }
+          ],
+          "alert": 0,
+          "alert_queue_overflow": 0,
+          "alerts_suppressed": 0,
+          "lua": {
+            "errors": 0,
+            "blocked_function_errors": 0,
+            "instruction_limit_errors": 0,
+            "memory_limit_errors": 0
+          }
+        },
+        "app_layer": {
+          "flow": {
+            "failed_tcp": 0,
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 1,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 1,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "failed_udp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 8,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          },
+          "error": {
+            "failed_tcp": {
+              "gap": 0
+            },
+            "http": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smtp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tls": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ssh": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "imap": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "smb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ntp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ftp-data": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "tftp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ike": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "quic": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dhcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rfb": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mqtt": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "telnet": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "websocket": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_tcp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "doh2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "rdp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "http2": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "bittorrent-dht": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "pop3": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "mdns": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "snmp": {
+              "gap": 0,
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dcerpc_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "dns_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "nfs_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "krb5_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "sip_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            },
+            "ldap_udp": {
+              "alloc": 0,
+              "parser": 0,
+              "internal": 0
+            }
+          },
+          "tx": {
+            "http": 0,
+            "ftp": 0,
+            "smtp": 0,
+            "tls": 0,
+            "ssh": 0,
+            "imap": 0,
+            "smb": 0,
+            "dcerpc_tcp": 0,
+            "dns_tcp": 0,
+            "nfs_tcp": 0,
+            "ntp": 0,
+            "ftp-data": 0,
+            "tftp": 0,
+            "ike": 0,
+            "krb5_tcp": 0,
+            "quic": 0,
+            "dhcp": 1,
+            "sip_tcp": 0,
+            "rfb": 0,
+            "mqtt": 0,
+            "telnet": 0,
+            "websocket": 0,
+            "ldap_tcp": 0,
+            "doh2": 0,
+            "rdp": 0,
+            "http2": 0,
+            "bittorrent-dht": 0,
+            "pop3": 0,
+            "mdns": 0,
+            "snmp": 0,
+            "dcerpc_udp": 0,
+            "dns_udp": 26,
+            "nfs_udp": 0,
+            "krb5_udp": 0,
+            "sip_udp": 0,
+            "ldap_udp": 0
+          }
+        }
+      },
+      "FM#01": {
+        "flow": {
+          "mgr": {
+            "full_hash_pass": 12,
+            "rows_per_sec": 6553,
+            "rows_maxlen": 2,
+            "flows_checked": 143,
+            "flows_notimeout": 124,
+            "flows_timeout": 19,
+            "flows_evicted": 19,
+            "flows_evicted_needs_work": 8
+          },
+          "spare": 9211,
+          "emerg_mode_entered": 0,
+          "emerg_mode_over": 0
+        },
+        "flow_bypassed": {
+          "closed": 0,
+          "pkts": 0,
+          "bytes": 0
+        },
+        "memcap": {
+          "pressure": 7,
+          "pressure_max": 7
+        },
+        "defrag": {
+          "mgr": {
+            "tracker_timeout": 0
+          },
+          "memuse": 33554432
+        }
+      },
+      "FR#01": {
+        "tcp": {
+          "active_sessions": -1
+        },
+        "flow": {
+          "active": -11,
+          "end": {
+            "state": {
+              "new": 10,
+              "established": 0,
+              "closed": 1,
+              "local_bypassed": 0,
+              "capture_bypassed": 0
+            },
+            "tcp_state": {
+              "none": 0,
+              "syn_sent": 0,
+              "syn_recv": 0,
+              "established": 0,
+              "fin_wait1": 0,
+              "fin_wait2": 0,
+              "time_wait": 0,
+              "last_ack": 0,
+              "close_wait": 0,
+              "closing": 0,
+              "closed": 1
+            },
+            "tcp_liberal": 0
+          },
+          "recycler": {
+            "recycled": 11,
+            "queue_avg": 0,
+            "queue_max": 1
+          }
+        }
+      },
+      "Global": {
+        "tcp": {
+          "memuse": 4980776,
+          "reassembly_memuse": 1050624
+        },
+        "http": {
+          "memuse": 672,
+          "memcap": 0,
+          "byterange": {
+            "memuse": 168384,
+            "memcap": 104857600
+          }
+        },
+        "ftp": {
+          "memuse": 0,
+          "memcap": 0
+        },
+        "app_layer": {
+          "expectations": 0
+        },
+        "ippair": {
+          "memuse": 398144,
+          "memcap": 398144
+        },
+        "host": {
+          "memuse": 382144,
+          "memcap": 33554432
+        },
+        "file_store": {
+          "open_files": 0
+        },
+        "flow": {
+          "memuse": 7234304
+        }
+      }
+    }
+  },
+  "return": "OK"
+}
