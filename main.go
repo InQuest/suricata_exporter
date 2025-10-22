@@ -121,6 +121,8 @@ var (
 		newPerThreadCounterMetric("decoder", "raw_packets_total", "", "raw"),
 		newPerThreadCounterMetric("decoder", "null_packets_total", "", "null"),
 		newPerThreadCounterMetric("decoder", "sll_packets_total", "", "sll"),
+		// New in 8.0.0: SLL2 (Linux cooked capture v2)
+		newPerThreadCounterMetric("decoder", "sll2_packets_total", "", "sll2").Optional(),
 		newPerThreadCounterMetric("decoder", "tcp_packets_total", "", "tcp"),
 		newPerThreadCounterMetric("decoder", "udp_packets_total", "", "udp"),
 		newPerThreadCounterMetric("decoder", "sctp_packets_total", "", "sctp"),
@@ -142,6 +144,9 @@ var (
 		newPerThreadCounterMetric("decoder", "teredo_packets_total", "", "teredo"),
 		newPerThreadCounterMetric("decoder", "ipv4_in_ipv6_packets_total", "", "ipv4_in_ipv6"),
 		newPerThreadCounterMetric("decoder", "ipv6_in_ipv6_packets_total", "", "ipv6_in_ipv6"),
+		// New in 8.0.0: IPv4 and IPv6 tunneling in IPv4
+		newPerThreadCounterMetric("decoder", "ipv4_in_ipv4_packets_total", "", "ipv4_in_ipv4").Optional(),
+		newPerThreadCounterMetric("decoder", "ipv6_in_ipv4_packets_total", "", "ipv6_in_ipv4").Optional(),
 		newPerThreadCounterMetric("decoder", "mpls_packets_total", "", "mpls"),
 		newPerThreadCounterMetric("decoder", "erspan_packets_total", "", "erspan"),
 		// New in 7.0.0
@@ -161,6 +166,10 @@ var (
 	perThreadDecoderEventAFPacketMetrics = []metricInfo{
 		newPerThreadCounterMetric("decoder_event", "afpacket_truncated_packets_total", "", "trunc_pkt"),
 	}
+
+	// Generic decoder events metric for all protocols and event types
+	perThreadDecoderEventsMetric = newPerThreadCounterMetric("decoder", "events_total", "", "<unused>", "protocol", "event")
+	globalDecoderEventsMetric    = newCounterMetric("decoder", "events_total", "", "<unused>", "protocol", "event")
 
 	// From .thread.flow
 	perThreadFlowMetrics = []metricInfo{
@@ -324,6 +333,10 @@ var (
 	// those up is more reasonable than the decoder keys to get a total
 	// count of app-layer detections.
 	perThreadAppLayerFlowMetric = newPerThreadCounterMetric("app_layer", "flows_total", "", "<unused>", "app")
+
+	// Generic app layer error metrics for all protocols and error types
+	perThreadAppLayerErrorsMetric = newPerThreadCounterMetric("app_layer", "errors_total", "", "<unused>", "protocol", "error_type")
+	globalAppLayerErrorsMetric    = newCounterMetric("app_layer", "errors_total", "", "<unused>", "protocol", "error_type")
 
 	// Flow manager
 
@@ -636,6 +649,88 @@ func handleNapatechMetrics(ch chan<- prometheus.Metric, message map[string]any) 
 	}
 }
 
+// Extract decoder events dynamically from decoder.event.* structure
+func handleDecoderEvents(ch chan<- prometheus.Metric, threadName string, decoder map[string]any, useGlobal bool) {
+	events, ok := decoder["event"].(map[string]any)
+	if !ok {
+		return
+	}
+
+	for protocol, protoEvents := range events {
+		protoMap, ok := protoEvents.(map[string]any)
+		if !ok {
+			continue
+		}
+
+		for eventName, value := range protoMap {
+			v, ok := value.(float64)
+			if !ok {
+				continue
+			}
+
+			if useGlobal {
+				ch <- prometheus.MustNewConstMetric(
+					globalDecoderEventsMetric.desc,
+					globalDecoderEventsMetric.t,
+					v,
+					protocol,
+					eventName,
+				)
+			} else {
+				ch <- prometheus.MustNewConstMetric(
+					perThreadDecoderEventsMetric.desc,
+					perThreadDecoderEventsMetric.t,
+					v,
+					protocol,
+					eventName,
+					threadName,
+				)
+			}
+		}
+	}
+}
+
+// Extract app layer errors dynamically from app_layer.error.* structure
+func handleAppLayerErrors(ch chan<- prometheus.Metric, threadName string, appLayer map[string]any, useGlobal bool) {
+	errors, ok := appLayer["error"].(map[string]any)
+	if !ok {
+		return
+	}
+
+	for protocol, protoErrors := range errors {
+		errorMap, ok := protoErrors.(map[string]any)
+		if !ok {
+			continue
+		}
+
+		for errorType, value := range errorMap {
+			v, ok := value.(float64)
+			if !ok {
+				continue
+			}
+
+			if useGlobal {
+				ch <- prometheus.MustNewConstMetric(
+					globalAppLayerErrorsMetric.desc,
+					globalAppLayerErrorsMetric.t,
+					v,
+					protocol,
+					errorType,
+				)
+			} else {
+				ch <- prometheus.MustNewConstMetric(
+					perThreadAppLayerErrorsMetric.desc,
+					perThreadAppLayerErrorsMetric.t,
+					v,
+					protocol,
+					errorType,
+					threadName,
+				)
+			}
+		}
+	}
+}
+
 // Handle the shared RX and worker thread portions.
 //
 // Depending on autofp or workers runmode, the "capture" entry
@@ -691,6 +786,9 @@ func handleReceiveCommon(ch chan<- prometheus.Metric, threadName string, thread 
 			}
 		}
 	}
+
+	// Extract all decoder events dynamically
+	handleDecoderEvents(ch, threadName, decoder, false)
 
 	// Defrag stats from worker and receive threads.
 	defrag := thread["defrag"].(map[string]any)
@@ -839,6 +937,9 @@ func handleWorkerThread(ch chan<- prometheus.Metric, threadName string, thread m
 			perThreadAppLayerFlowMetric.t, value, k, threadName)
 
 	}
+
+	// Extract all app layer errors dynamically
+	handleAppLayerErrors(ch, threadName, appLayer, false)
 }
 
 func handleFlowManagerThread(ch chan<- prometheus.Metric, threadName string, thread map[string]any) {
@@ -948,6 +1049,16 @@ func handleGlobal(ch chan<- prometheus.Metric, message map[string]any) {
 
 	} else {
 		log.Printf("WARN: No top-level detect entry")
+	}
+
+	// Extract global decoder events
+	if globalDecoder, ok := message["decoder"].(map[string]any); ok {
+		handleDecoderEvents(ch, "", globalDecoder, true)
+	}
+
+	// Extract global app layer errors
+	if globalAppLayer, ok := message["app_layer"].(map[string]any); ok {
+		handleAppLayerErrors(ch, "", globalAppLayer, true)
 	}
 
 	if *totals {
